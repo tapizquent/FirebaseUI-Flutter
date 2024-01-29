@@ -107,9 +107,12 @@ class _LoginViewState extends State<LoginView> {
     }).toList();
 
     if (widget.oauthButtonVariant == OAuthButtonVariant.icon_and_text) {
-      return Column(
-        mainAxisSize: MainAxisSize.min,
-        children: oauthButtonsList,
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: oauthButtonsList,
+        ),
       );
     } else {
       return Row(
